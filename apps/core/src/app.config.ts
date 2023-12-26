@@ -97,23 +97,23 @@ export const CROSS_DOMAIN = {
 }
 
 export const MONGO_DB = {
-  dbName: argv.collection_name || (DEMO_MODE ? 'mx-space_demo' : 'mx-space'),
-  host: argv.db_host || '127.0.0.1',
+  dbName: argv.collection_name || 'mxcore',
+  host: argv.db_host || 'cluster0.l1oa67t.mongodb.net',
   // host: argv.db_host || '10.0.0.33',
   port: argv.db_port || 27017,
-  user: argv.db_user || '',
-  password: argv.db_password || '',
+  user: argv.db_user || 'khieudv',
+  password: argv.db_password || 'khieudv9396',
   get uri() {
     const userPassword =
       this.user && this.password ? `${this.user}:${this.password}@` : ''
-    return `mongodb://${userPassword}${this.host}:${this.port}/${this.dbName}`
+    return ' mongodb+srv://khieudv:khieudv9396@cluster0.l1oa67t.mongodb.net/mxcore'
   },
 }
 
 export const REDIS = {
-  host: argv.redis_host || 'localhost',
-  port: argv.redis_port || 6379,
-  password: argv.redis_password || null,
+  host: argv.redis_host || 'redis-19734.c267.us-east-1-4.ec2.cloud.redislabs.com',
+  port: argv.redis_port || 19734,
+  password: argv.redis_password || 'IUkygRhZH1rPzRiu9Fwd7OSOE9pSRZw2',
   ttl: null,
   httpCacheTTL: 15,
   max: 120,
